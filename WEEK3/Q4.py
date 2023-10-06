@@ -131,23 +131,22 @@ for node in [Node1, Node2, Node3]:
 
 link.print_link()
 
-# 在链表中插入位置
+# 在链表中插入几个元素
 link.insert_node(2, 'e')
-link.insert_node(4, 'f')
-link.insert_node(4, 'f')
+link.insert_node(3, 'f')
+link.insert_node(3, 'f')
 link.insert_node(8, 'h')  # 无法插入
 
-# 打印链表
 link.print_link()
 print('*****************')
 
 # 删除元素
-link.delete_node(2)
+link.delete_node(3)
 link.print_link()
 
 print('*****************')
 # 查找元素
-node_ids = link.find_node('f')  # 查询元素5的位置
+node_ids = link.find_node('f')  # 查询元素位置
 if len(node_ids) == 0:
     print('链表中无此元素')
 else:
