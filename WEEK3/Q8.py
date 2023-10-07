@@ -46,7 +46,6 @@ def merge_sort(arr):
 
 
 def quick_sort(arr, start, end):
-    # 感觉快排写的没什么问题，但跑1000规模好像就不太可以了
     if start >= end:
         return
     mid, left, right = arr[start], start, end

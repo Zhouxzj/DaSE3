@@ -106,6 +106,26 @@ class SingleLinkList:
             pos += 1
         return result
 
+    def change_node_by_pos(self, value, data):
+        current_node = self.head
+        if value < 1 or value > self.length:
+            print("index error: out of range")
+            return
+        pos = 1
+        while pos < value:
+            current_node = current_node.next
+            pos += 1
+        current_node.data = data
+        return
+
+    def change_node_by_item(self, value, data):
+        current_node = self.head
+        while current_node is not None:
+            if current_node.data == value:
+                current_node.data = data
+            current_node = current_node.next
+        return
+
     def print_link(self):
         current_node = self.head
         while current_node is not None:
@@ -151,3 +171,7 @@ if len(node_ids) == 0:
     print('链表中无此元素')
 else:
     print(node_ids)
+
+link.change_node_by_pos(2, 'ss')
+link.change_node_by_item('f', 'd')
+link.print_link()
